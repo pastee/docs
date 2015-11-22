@@ -50,6 +50,8 @@
 
 <p>We currently have no language bindings, if you&rsquo;d like to submit one, please open an issue on (Github)[https://github.com/pastee/pastee]</p>
 
+<aside class="warning">The whole API is HTTPS only. If you need HTTP, you&rsquo;ll have to write your own proxy script.</aside>
+
 <h1 id="authentication">Authentication</h1>
 <pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
@@ -82,7 +84,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
           <h1 id="pastes">Pastes</h1>
 
 <h2 id="list-pastes">List pastes</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.paste.ee/v1/pastes"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.paste.ee/v1/pastes"</span>
   -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 
@@ -124,7 +126,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.paste.ee/v1/pastes</code></p>
+<p><code class="prettyprint">GET https://api.paste.ee/v1/pastes</code></p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -148,7 +150,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 </tbody></table>
 
 <h2 id="submit-a-new-paste">Submit a new paste</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.paste.ee/v1/pastes"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.paste.ee/v1/pastes"</span>
   -X <span class="s2">"POST"</span>
   -H <span class="s2">"Content-Type: application/json"</span>
   -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
@@ -160,7 +162,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;id&gt;"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://paste.ee/p/&lt;id&gt;"</span><span class="w">
+  </span><span class="nt">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://paste.ee/p/&lt;id&gt;"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -168,7 +170,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://api.paste.ee/v1/pastes</code></p>
+<p><code class="prettyprint">POST https://api.paste.ee/v1/pastes</code></p>
 
 <p>Accepts data either as <code class="prettyprint">application/x-www-form-urlencoded</code> or <code class="prettyprint">application/json</code></p>
 
@@ -217,7 +219,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 </tbody></table>
 
 <h2 id="submit-a-new-paste-with-a-multipart-request-files">Submit a new paste with a multipart request/files</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.paste.ee/v1/pastes"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.paste.ee/v1/pastes"</span>
   -X <span class="s2">"POST"</span>
   -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
   -F <span class="s2">"files[]=@test.txt"</span>
@@ -230,13 +232,13 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;id&gt;"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://paste.ee/p/&lt;id&gt;"</span><span class="w">
+  </span><span class="nt">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://paste.ee/p/&lt;id&gt;"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://api.paste.ee/v1/pastes/file</code></p>
+<p><code class="prettyprint">POST https://api.paste.ee/v1/pastes/file</code></p>
 
 <h3 id="request-body">Request Body</h3>
 
@@ -265,7 +267,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 </tbody></table>
 
 <h2 id="get-a-paste">Get a paste</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.paste.ee/v1/pastes/&lt;id&gt;"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.paste.ee/v1/pastes/&lt;id&gt;"</span>
   -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 
@@ -297,7 +299,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.paste.ee/v1/pastes/&lt;id&gt;</code></p>
+<p><code class="prettyprint">GET https://api.paste.ee/v1/pastes/&lt;id&gt;</code></p>
 
 <h3 id="path-parameters">Path parameters</h3>
 
@@ -314,7 +316,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 </tbody></table>
 
 <h2 id="remove-a-paste">Remove a paste</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.paste.ee/v1/pastes/&lt;id&gt;"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.paste.ee/v1/pastes/&lt;id&gt;"</span>
   -X <span class="s2">"DELETE"</span>
   -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
@@ -331,7 +333,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">DELETE http://api.paste.ee/v1/pastes/&lt;id&gt;</code></p>
+<p><code class="prettyprint">DELETE https://api.paste.ee/v1/pastes/&lt;id&gt;</code></p>
 
 <h3 id="path-parameters">Path parameters</h3>
 
@@ -350,7 +352,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
           <h1 id="syntaxes">Syntaxes</h1>
 
 <h2 id="list-syntaxes">List Syntaxes</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.paste.ee/v1/syntaxes"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.paste.ee/v1/syntaxes"</span>
   -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 
@@ -378,10 +380,10 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.paste.ee/v1/syntaxes</code></p>
+<p><code class="prettyprint">GET https://api.paste.ee/v1/syntaxes</code></p>
 
 <h2 id="get-syntax">Get syntax</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.paste.ee/v1/syntaxes/&lt;id&gt;"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.paste.ee/v1/syntaxes/&lt;id&gt;"</span>
   -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 
@@ -402,12 +404,12 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.paste.ee/v1/syntaxes/&lt;id&gt;</code></p>
+<p><code class="prettyprint">GET https://api.paste.ee/v1/syntaxes/&lt;id&gt;</code></p>
 
           <h1 id="users">Users</h1>
 
 <h2 id="user-key-information">User/key information</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api.paste.ee/v1/users/info"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://api.paste.ee/v1/users/info"</span>
   -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 </code></pre>
 
@@ -423,7 +425,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.paste.ee/v1/users/info</code></p>
+<p><code class="prettyprint">GET https://api.paste.ee/v1/users/info</code></p>
 
 <h2 id="user-authentication">User Authentication</h2>
 <pre class="highlight shell"><code>curl <span class="s2">"https://api.paste.ee/v1/users/authenticate"</span>
@@ -439,9 +441,9 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint authenticates users for UserApplications, allowing further api functionality like listing pastes and submitting them while attaching them to the user&rsquo;s account. It also requires the usage of HTTPS, and won&rsquo;t work without it.</p>
+<p>This endpoint authenticates users for UserApplications, allowing further api functionality like listing pastes and submitting them while attaching them to the user&rsquo;s account.</p>
 
-<p>You can also use the url <code class="prettyprint">http://paste.ee/account/api/authorize/&lt;application key&gt;</code> to have the user generate a token themselves.</p>
+<p>You can also use the url <code class="prettyprint">https://paste.ee/account/api/authorize/&lt;application key&gt;</code> to have the user generate a token themselves.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
