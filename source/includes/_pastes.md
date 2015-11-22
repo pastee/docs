@@ -3,7 +3,7 @@
 ## List pastes
 
 ```shell
-curl "http://api.paste.ee/v1/pastes"
+curl "https://api.paste.ee/v1/pastes"
   -H "X-Auth-Token: meowmeowmeow"
 ```
 
@@ -45,7 +45,7 @@ You can traverse pages by using `next_page_url` and `prev_page_url`. Please, whe
 
 ### HTTP Request
 
-`GET http://api.paste.ee/v1/pastes`
+`GET https://api.paste.ee/v1/pastes`
 
 ### Query Parameters
 
@@ -57,7 +57,7 @@ page | 1 | Page number
 ## Submit a new paste
 
 ```shell
-curl "http://api.paste.ee/v1/pastes"
+curl "https://api.paste.ee/v1/pastes"
   -X "POST"
   -H "Content-Type: application/json"
   -H "X-Auth-Token: meowmeowmeow"
@@ -69,7 +69,7 @@ curl "http://api.paste.ee/v1/pastes"
 ```json
 {
   "id": "<id>",
-  "link": "http://paste.ee/p/<id>"
+  "link": "https://paste.ee/p/<id>"
 }
 ```
 
@@ -77,7 +77,7 @@ This endpoint submits a paste to the database.
 
 ### HTTP Request
 
-`POST http://api.paste.ee/v1/pastes`
+`POST https://api.paste.ee/v1/pastes`
 
 Accepts data either as `application/x-www-form-urlencoded` or `application/json`
 
@@ -100,7 +100,7 @@ contents | Section contents
 ## Submit a new paste with a multipart request/files
 
 ```shell
-curl "http://api.paste.ee/v1/pastes"
+curl "https://api.paste.ee/v1/pastes"
   -X "POST"
   -H "X-Auth-Token: meowmeowmeow"
   -F "files[]=@test.txt"
@@ -113,13 +113,13 @@ curl "http://api.paste.ee/v1/pastes"
 ```json
 {
   "id": "<id>",
-  "link": "http://paste.ee/p/<id>"
+  "link": "https://paste.ee/p/<id>"
 }
 ```
 
 ### HTTP Request
 
-`POST http://api.paste.ee/v1/pastes/file`
+`POST https://api.paste.ee/v1/pastes/file`
 
 ### Request Body
 
@@ -132,7 +132,7 @@ syntaxes[] | true | Array of syntaxes, can also specify syntaxes for only specif
 ## Get a paste
 
 ```shell
-curl "http://api.paste.ee/v1/pastes/<id>"
+curl "https://api.paste.ee/v1/pastes/<id>"
   -H "X-Auth-Token: meowmeowmeow"
 ```
 
@@ -164,7 +164,7 @@ This endpoint gets a paste and it's contents.
 
 ### HTTP Request
 
-`GET http://api.paste.ee/v1/pastes/<id>`
+`GET https://api.paste.ee/v1/pastes/<id>`
 
 ### Path parameters
 
@@ -175,7 +175,7 @@ id | The paste identifier.
 ## Remove a paste
 
 ```shell
-curl "http://api.paste.ee/v1/pastes/<id>"
+curl "https://api.paste.ee/v1/pastes/<id>"
   -X "DELETE"
   -H "X-Auth-Token: meowmeowmeow"
 ```
@@ -192,7 +192,7 @@ This endpoint deletes a paste permanently.
 
 ### HTTP Request
 
-`DELETE http://api.paste.ee/v1/pastes/<id>`
+`DELETE https://api.paste.ee/v1/pastes/<id>`
 
 ### Path parameters
 

@@ -3,7 +3,7 @@
 ## User/key information
 
 ```shell
-curl "http://api.paste.ee/v1/users/info"
+curl "https://api.paste.ee/v1/users/info"
   -H "X-Auth-Token: meowmeowmeow"
 ```
 
@@ -19,7 +19,7 @@ This endpoint will return information about the current api key.
 
 ### HTTP Request
 
-`GET http://api.paste.ee/v1/users/info`
+`GET https://api.paste.ee/v1/users/info`
 
 ## User Authentication
 
@@ -37,9 +37,9 @@ curl "https://api.paste.ee/v1/users/authenticate"
 }
 ```
 
-This endpoint authenticates users for UserApplications, allowing further api functionality like listing pastes and submitting them while attaching them to the user's account. It also requires the usage of HTTPS, and won't work without it.
+This endpoint authenticates users for UserApplications, allowing further api functionality like listing pastes and submitting them while attaching them to the user's account.
 
-You can also use the url `http://paste.ee/account/api/authorize/<application key>` to have the user generate a token themselves.
+You can also use the url `https://paste.ee/account/api/authorize/<application key>` to have the user generate a token themselves.
 
 ### HTTP Request
 

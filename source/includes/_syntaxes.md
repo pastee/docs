@@ -3,7 +3,7 @@
 ## List Syntaxes
 
 ```shell
-curl "http://api.paste.ee/v1/syntaxes"
+curl "https://api.paste.ee/v1/syntaxes"
   -H "X-Auth-Token: meowmeowmeow"
 ```
 
@@ -31,12 +31,12 @@ This endpoint lists available syntaxes.
 
 ### HTTP Request
 
-`GET http://api.paste.ee/v1/syntaxes`
+`GET https://api.paste.ee/v1/syntaxes`
 
 ## Get syntax
 
 ```shell
-curl "http://api.paste.ee/v1/syntaxes/<id>"
+curl "https://api.paste.ee/v1/syntaxes/<id>"
   -H "X-Auth-Token: meowmeowmeow"
 ```
 
@@ -57,4 +57,4 @@ This endpoint returns information about a syntax.
 
 ### HTTP Request
 
-`GET http://api.paste.ee/v1/syntaxes/<id>`
+`GET https://api.paste.ee/v1/syntaxes/<id>`
