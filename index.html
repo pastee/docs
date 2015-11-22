@@ -48,12 +48,12 @@
 
 <p>Welcome to the Paste.ee API! You can use our API to access Paste.ee endpoints, which can get and submit pastes, and various other information like syntaxes.</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>We currently have no language bindings, if you&rsquo;d like to submit one, please open an issue on (Github)[https://github.com/pastee/pastee]</p>
 
 <h1 id="authentication">Authentication</h1>
 <pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
+  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
 
 curl <span class="s2">"api_endpoint_here?key=meowmeowmeow"</span>
 
