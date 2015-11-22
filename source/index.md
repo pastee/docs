@@ -21,7 +21,7 @@ search: true
 
 Welcome to the Paste.ee API! You can use our API to access Paste.ee endpoints, which can get and submit pastes, and various other information like syntaxes.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We currently have no language bindings, if you'd like to submit one, please open an issue on (Github)[https://github.com/pastee/pastee]
 
 # Authentication
 
