@@ -28,7 +28,7 @@ We have language bindings in Shell, Ruby, and Python! You can view code examples
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+  -H "X-Auth-Token: meowmeowmeow"
 
 curl "api_endpoint_here?key=meowmeowmeow"
 
