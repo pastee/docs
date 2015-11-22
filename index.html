@@ -118,6 +118,8 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 
 <p>This endpoint retrieves all pastes.</p>
 
+<p>You can traverse pages by using <code class="prettyprint">next_page_url</code> and <code class="prettyprint">prev_page_url</code>. Please, when listing all pastes in an account, increase items per page to a reasonable amount to minimize requests.</p>
+
 <aside class="warning">If you&rsquo;re not using a user application key, you will get a 401 Unauthorized response.</aside>
 
 <h3 id="http-request">HTTP Request</h3>
@@ -138,11 +140,12 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 <td>25</td>
 <td>Items to return per page.</td>
 </tr>
+<tr>
+<td>page</td>
+<td>1</td>
+<td>Page number</td>
+</tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
 
 <h2 id="submit-a-new-paste">Submit a new paste</h2>
 <pre class="highlight shell"><code>curl <span class="s2">"http://api.paste.ee/v1/pastes"</span>
