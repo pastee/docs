@@ -5,7 +5,7 @@ language_tabs:
   - shell
 
 toc_footers:
-  - <a href='http://paste.ee/account/api'>Sign Up for a Developer Key</a>
+  - <a href='https://paste.ee/account/api'>Sign Up for a Developer Key</a>
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -21,7 +21,7 @@ search: true
 
 Welcome to the Paste.ee API! You can use our API to access Paste.ee endpoints, which can get and submit pastes, and various other information like syntaxes.
 
-We currently have no language bindings, if you'd like to submit one, please open an issue on (Github)[https://github.com/pastee/pastee]
+We currently have no language bindings, if you'd like to submit one, please open an issue on (https://github.com/pastee/pastee)[Github]
 
 <aside class="warning">The whole API is HTTPS only. If you need HTTP, you'll have to write your own proxy script.</aside>
 
@@ -40,7 +40,7 @@ curl "api_endpoint_here"
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-Paste.ee uses Application keys to allow access to the API. You can register a new Application key at your [account api page](http://paste.ee/account/api).
+Paste.ee uses Application keys to allow access to the API. You can register a new Application key at your [account api page](https://paste.ee/account/api).
 
 Paste.ee expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
