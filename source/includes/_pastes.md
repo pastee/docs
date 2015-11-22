@@ -39,6 +39,8 @@ curl "http://api.paste.ee/v1/pastes"
 
 This endpoint retrieves all pastes.
 
+You can traverse pages by using `next_page_url` and `prev_page_url`. Please, when listing all pastes in an account, increase items per page to a reasonable amount to minimize requests.
+
 <aside class="warning">If you're not using a user application key, you will get a 401 Unauthorized response.</aside>
 
 ### HTTP Request
@@ -50,10 +52,7 @@ This endpoint retrieves all pastes.
 Parameter | Default | Description
 --------- | ------- | -----------
 perpage | 25 | Items to return per page.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+page | 1 | Page number
 
 ## Submit a new paste
 
