@@ -6,7 +6,7 @@ The Paste.ee API uses the following error codes:
 Error Code | Meaning
 ---------- | -------
 400 | Bad Request -- Your request sucks
-401 | Unauthorized -- Your Application/User application key is wrong
+401 | Unauthorized -- Your Application/User application key is wrong.
 403 | Forbidden -- The application is a standard Application, and the resource requires a UserApplication.
 404 | Not Found -- The specified resource could not be found.
 405 | Method Not Allowed -- You tried to access an endpoint with an invalid method.

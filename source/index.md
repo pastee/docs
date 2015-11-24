@@ -30,7 +30,7 @@ We currently have no language bindings, if you'd like to submit one, please open
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "X-Auth-Token: meowmeowmeow"
+  -H "Access-Key: meowmeowmeow"
 
 curl "api_endpoint_here?key=meowmeowmeow"
 
@@ -49,6 +49,10 @@ Paste.ee expects for the API key to be included in all API requests to the serve
 Or in a query parameter/request body:
 
 `key=meowmeowmeow`
+
+Or as the username in basic auth:
+
+`Authorization: Basic base64('meowmeowmeow:')`
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal application/user application key.
