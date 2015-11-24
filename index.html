@@ -55,7 +55,7 @@
 <h1 id="authentication">Authentication</h1>
 <pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"X-Auth-Token: meowmeowmeow"</span>
+  -H <span class="s2">"Access-Key: meowmeowmeow"</span>
 
 curl <span class="s2">"api_endpoint_here?key=meowmeowmeow"</span>
 
@@ -76,6 +76,10 @@ curl <span class="s2">"api_endpoint_here"</span>
 <p>Or in a query parameter/request body:</p>
 
 <p><code class="prettyprint">key=meowmeowmeow</code></p>
+
+<p>Or as the username in basic auth:</p>
+
+<p><code class="prettyprint">Authorization: Basic base64(&#39;meowmeowmeow:&#39;)</code></p>
 
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal application/user application key.
@@ -122,7 +126,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 
 <p>You can traverse pages by using <code class="prettyprint">next_page_url</code> and <code class="prettyprint">prev_page_url</code>. Please, when listing all pastes in an account, increase items per page to a reasonable amount to minimize requests.</p>
 
-<aside class="warning">If you&rsquo;re not using a user application key, you will get a 401 Unauthorized response.</aside>
+<aside class="warning">If you&rsquo;re not using a user application key, you will get a 403 Forbidden response when trying to list pastes.</aside>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -483,7 +487,7 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized &ndash; Your Application/User application key is wrong</td>
+<td>Unauthorized &ndash; Your Application/User application key is wrong.</td>
 </tr>
 <tr>
 <td>403</td>
