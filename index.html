@@ -185,19 +185,23 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Optional</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>encrypted</td>
-<td>Whether the paste should be treated as encrypted.</td>
+<td>true</td>
+<td>Whether the paste should be treated as encrypted. Default: false</td>
 </tr>
 <tr>
 <td>description</td>
-<td>Optional field for the overall paste description.</td>
+<td>true</td>
+<td>Overall paste description.</td>
 </tr>
 <tr>
 <td>sections</td>
+<td>false</td>
 <td>Array of sections.</td>
 </tr>
 </tbody></table>
@@ -207,19 +211,23 @@ You must replace <code>meowmeowmeow</code> with your personal application/user a
 <table><thead>
 <tr>
 <th>Key</th>
+<th>Optional</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>name</td>
-<td>Section name</td>
+<td>true</td>
+<td>Section name. Default: New Paste 1-10</td>
 </tr>
 <tr>
 <td>syntax</td>
-<td>Section syntax</td>
+<td>true</td>
+<td>Section syntax. Default: autodetect</td>
 </tr>
 <tr>
 <td>contents</td>
+<td>false</td>
 <td>Section contents</td>
 </tr>
 </tbody></table>
