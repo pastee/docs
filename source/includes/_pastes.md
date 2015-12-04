@@ -85,19 +85,19 @@ Accepts data either as `application/x-www-form-urlencoded` or `application/json`
 
 ### Request Body
 
-Parameter | Description
---------- | -----------
-encrypted | Whether the paste should be treated as encrypted.
-description | Optional field for the overall paste description.
-sections  | Array of sections.
+Parameter | Optional | Description
+--------- | -------- | -----------
+encrypted | true | Whether the paste should be treated as encrypted. Default: false
+description | true | Overall paste description.
+sections  | false | Array of sections.
 
 ### Sections
 
-Key | Description
---- | -----------
-name | Section name
-syntax | Section syntax
-contents | Section contents
+Key | Optional | Description
+--- | -------- | -----------
+name | true | Section name. Default: New Paste 1-10
+syntax | true | Section syntax. Default: autodetect
+contents | false | Section contents
 
 ## Submit a new paste with a multipart request/files
 
