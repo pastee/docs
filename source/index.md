@@ -21,7 +21,7 @@ search: true
 
 Welcome to the Paste.ee API! You can use our API to access Paste.ee endpoints, which can get and submit pastes, and various other information like syntaxes.
 
-We currently have no language bindings, if you'd like to submit one, please open an issue on (Github)[https://github.com/pastee/pastee]
+We currently have no language bindings, if you'd like to submit one, please open an issue on [Github](https://github.com/pastee/pastee)
 
 <aside class="warning">The whole API is HTTPS only. If you need HTTP, you'll have to write your own proxy script.</aside>
 
