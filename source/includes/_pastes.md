@@ -73,6 +73,8 @@ curl "https://api.paste.ee/v1/pastes"
 }
 ```
 
+<aside class="warning">The syntax field is only linked to the short identifier given to syntaxes. More information (here)[https://beta.paste.ee/wiki/API:v1:Syntaxes].</aside>
+
 This endpoint submits a paste to the database.
 
 ### HTTP Request
@@ -116,6 +118,8 @@ curl "https://api.paste.ee/v1/pastes"
   "link": "https://paste.ee/p/<id>"
 }
 ```
+
+<aside class="warning">The syntax field is only linked to the short identifier given to syntaxes. More information (here)[https://beta.paste.ee/wiki/API:v1:Syntaxes].</aside>
 
 ### HTTP Request
 
